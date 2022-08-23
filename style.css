@@ -7,7 +7,6 @@
 .visibility{
     opacity: 0%;
 }
-
 :root{
     --first-color: rgb(38,91,192);
     --seconde-color: rgb(208,208,208);
@@ -50,40 +49,43 @@ h2{
     font-weight: 700;
 }
 /*  header  */
+#fixe{
+    position: fixed;
+    width:100% ;
+    margin-top: -4%;
+    z-index: 5;
+    
+}
 header{
     background-color: #F0EFEF;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     justify-items: center;
-    position: relative;
-    height: 50pX;
+    width: 100%;
 }
 header h2{
-    height: 50px;
-    padding: 0 7%;
     font-size: 18px;
     align-items: center;
     animation-name: logo;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     transition-timing-function: linear;
+    width: auto;
 }
 header >ul{
     display: flex;
     justify-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    width: 50%;
 }
-header >ul > li{
-    height: 50px;
-}
+
 header >ul >li a{
     font-weight: 600;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
-    padding: 0 10px;
+    height: 100%;
 }
 .barre{
     display: flex;
@@ -92,7 +94,7 @@ header >ul >li a{
 }
 header .barre li a{
     display: flex;
-    
+    height: 50px;
 }
 header a{
     transition-duration: var(--first-transition);
@@ -117,24 +119,30 @@ header a:hover{
 
 @media(max-width:655px){
     header{
-        min-height: 100px;
-        max-height: 150px;
         flex-direction: column;
+        align-self: center;
     }
     h2{
-        margin: 0;
+        margin-bottom: 2%;
         text-align: center;
-        padding-top: 10px;
+    }
+    header >ul{
+        width: 100%;
     }
     header >ul >li a{
-        padding: 0 2px;
         font-size: 12px;
     }
-}
 
+}
+@media(min-width:1700px){
+    header{
+        font-size: 170%;
+    }
+}
 /* HOME   */
 #HOME{
     margin-top: 4%;
+    padding: 4%;
 }
 #HOME .container{
     display: flex;
@@ -146,8 +154,10 @@ header a:hover{
     border-radius: 50%;
     min-width: 160px;
     min-height: 160px;
+    width: 45%;
 }
 #HOME .container div{
+    width: 45%;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -179,6 +189,14 @@ header a:hover{
     }
     #HOME h2{
         font-size: 16px;
+        margin: 2%;
+    }
+    #myPicture{
+        margin: 5%;
+        width: 100%;
+    }
+    #HOME .container div{
+        width: 80%;
     }
 }
 @media(max-width:500px){
@@ -186,14 +204,25 @@ header a:hover{
         flex-direction: column;
     }
 }
+@media(min-width:1500px){
+     h2{
+         font-size: 250%;
+    }
+    #HOME .container ul a img{
+        width: 80px;
+        height: 80px;
+    }
+}
 
 /*   ABOUT   */
 #ABOUT{
+    width: 60%;
     margin: 5% auto;
+    
 }
 #ABOUT div{
     min-width: 150px;
-    max-width: 460px;
+    
     margin: 0 auto;
     padding: 1%;
     background-color: #F0EFEF;
@@ -208,13 +237,27 @@ header a:hover{
     background-color: var(--first-color);
     color: white;
     font-size: 110%;
-    padding: 3%;
+    padding: 1%;
     border: none;
     cursor: pointer;
 }
 @media(max-width:655px){
     #ABOUT p{
         font-size: 14px;
+    }
+}
+@media(min-width:1900px){
+    #ABOUT{
+        margin: 1% auto;
+    }
+    #ABOUT h2{
+         font-size: 180%;
+    }
+    #ABOUT p{
+        font-size: 180%;
+    }
+    #ABOUT button{
+        font-size: 150%;
     }
 }
 /*   EDUCATION   */
@@ -237,15 +280,15 @@ header a:hover{
 #EDUCATION .parent{
     padding: 1%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 .parent div{
+    width: 30%;
     border: 2px solid var(--seconde-color);
     padding: 2%;
     margin: 0 1%;
     display: flex;
-    height: 100px;
 }
 .parent div img{
     margin-right: 3%;
@@ -265,6 +308,7 @@ header a:hover{
         text-align: left;
     }
     .parent div{
+        width: 100%;
         max-width: 350px;
         min-width: 200px;
         margin-bottom: 10px;
@@ -320,14 +364,15 @@ header a:hover{
     margin: 5px auto;
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    justify-content: center;
 }
 .domaine div{
     margin-bottom: 10px;
-    padding: 10px;
+    padding: 2%;
 }
 .domaine img{
-     min-width: 150px;
-     max-width: 270px;
+    min-width: 190px;
+    max-width: 280px;
      height: auto;
 }
 #CERTIFICATIONS img:hover{
@@ -342,6 +387,36 @@ header a:hover{
         font-size: 100%;
     }
 }
+@media(min-width:1700px){
+    #EDUCATION h3{
+        font-size: 190%;
+    }
+    .parent{
+        justify-content: center;
+    }
+    .parent span{
+        font-size: 160%;
+    }
+    .parent .Date{
+        font-size: 130%;
+    }
+    h4{
+        font-size: 140%;
+    }
+    .allSkills img{
+        width: 70px;
+        height: 70px;
+    }
+    .domaine{
+        grid-template-columns: repeat(auto-fill,minmax(300px,600px));
+    }
+    #CERTIFICATIONS div img{
+        min-width: 300px;
+        max-width: 450px;
+    }
+    
+    
+}
 /* PROJECT   */
 #PROJECT h2{
     text-align: center;
@@ -349,11 +424,11 @@ header a:hover{
 }
 #projects-parent{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .projects-child{
-    width: 390px;
-    padding: 3%;
+    width: 40%;
+    padding: 5%;
     position: relative;
     
 }
@@ -377,6 +452,7 @@ article{
     position: absolute;
     top: 52%;
     left: 9%;
+    padding: 2%;
 }
 .projects-child h5{
     font-weight: 800;
@@ -390,9 +466,8 @@ article{
     border: 1.5px solid var(--seconde-color);
 }
 .projects-child button{
-    width: 110px;
-    height: 35px;
-    padding: 10px;
+    padding: 2%;
+    margin: 2%;
     background-color: black;
     color: white;
     font-weight: 700;
@@ -416,6 +491,7 @@ article{
 @media(max-width:720px){
     #projects-parent{
         flex-direction: column;
+        align-items: center;
     }
 }
 @media(max-width:500px){
@@ -423,37 +499,58 @@ article{
         width: 84%;
     }
 }
+@media(min-width:1900px){
+    .projects-child div{
+        height: 700px;
+    }
+    h5{
+        font-size: 160%;
+    }
+    .projects-child p{
+        font-size: 150%;
+    }
+    .projects-child button{
+        font-size: 140%;
+
+    }
+    .projects-child #bus{
+        width: 50%;
+        height: auto;
+    }
+}
 /*   CONTACT   */
 #CONTACT .container{
     background-color: white;
-    padding: 20px;
+    padding: 5%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row-reverse;
+}
+#CONTACT form{
+    width: 30%;
+    height: auto;
 }
 input::placeholder,textarea::placeholder{
     opacity: 50%;
     font-weight: 700;
 }
 input,textarea{
-    margin-top: 20px;
-    margin-right: 10px;
-    padding: 5px;
+    margin-top: 4%;
+    margin-right: 1%;
+    padding: 2%;
     background-color: #F0EFEF;
 }
 #CONTACT form #subject,#text,#submit{
     display: block;
 }
 #CONTACT #submit{
-    width: 100px;
-    height: 30px;
-    padding: 5px;
+    padding: 3% 12%;
     background-color: var(--first-color);
     color: white;
      border: none;
     font-weight: 700;
-    margin-top: 7px;
+    margin-top: 4%;
     margin-left: 3%;
     cursor: pointer;
 }
@@ -463,8 +560,7 @@ input,textarea{
      transform: scale(1.1);
 }
 #CONTACT img{
-    max-width: 334px;
-    min-width: 200px;
+    width: 40%;
     height: auto;
 }
 .input_control .success input{
@@ -504,6 +600,9 @@ textarea::-webkit-scrollbar-thumb{
     #CONTACT img{
         width: 50%;
     }
+    #CONTACT form{
+        width: 100%;
+    }
 }
 
 /*  links   */
@@ -529,13 +628,12 @@ textarea::-webkit-scrollbar-thumb{
     font-weight: 700;
 }
 #container-links button{
-    height: 50px;
     background-color: var(--third-color);
     color: black;
     font-size: 14px;
     cursor: pointer;
     min-width: 160px;
-    padding: 0;
+    padding: 3%;
     margin-bottom: 10px;
 }
 
@@ -570,10 +668,22 @@ textarea::-webkit-scrollbar-thumb{
     display: inline;
     font-size: 15px;
 }
-
+@media(min-width:1800px){
+    #links h3,#links a{
+        font-size: 160%;
+    }
+    #links span{
+        font-size: 130%;
+    }
+    #contact-info img{
+        width: 40px;
+        height: auto;
+    }
+}
 /* footer  */
 footer{
-    background-color: var(--fourth-color);
+    border-top: 2px solid black;
+    background-color: var(--first-color);
     color: white;
     font-weight: 700;
     padding: 20px;
@@ -584,7 +694,11 @@ footer .container div:first-of-type{
 footer .container div:last-of-type{
     text-align: center;
 }
-
+@media(min-width:1700px){
+    footer div{
+        font-size: 140%;
+    }
+}
 
 
 
