@@ -699,7 +699,11 @@ footer .container div:last-of-type{
         font-size: 140%;
     }
 }
-
+@media(max-width:600px){
+    .visibility{
+        opacity: 100%;
+    }
+}
 
 
 /*   ANIMATIONS     */
