@@ -13,19 +13,19 @@
      <header>
         <h2><span class="color-bleu">TFARES I</span>sam</h2>
         <ul id="menu">
-          <li><a href="#HOME">HOME</a></li>
-          <li><a href="#ABOUT">ABOUT</a></li>
-          <li id="educate"><a  href="#EDUCATION" >EDUCATION</a>
+          <li><a href="#HOME" onclick="visible(0)">HOME</a></li>
+          <li><a href="#ABOUT" onclick="visible(1)">ABOUT</a></li>
+          <li id="educate"><a  href="#EDUCATION" onclick="visible(2)">EDUCATION</a>
               <div id="sub-content">
                 <ul class="barre">
-                  <li><a href="#STUDIES">STUDIES</a></li>
-                  <li><a href="#SKILLS">SKILLS</a></li>
-                  <li><a href="#CERTIFICATIONS">CERTIFICATIONS</a></li>
+                  <li><a href="#STUDIES" onclick="visible(2)">STUDIES</a></li>
+                  <li><a href="#SKILLS" onclick="visible(2)">SKILLS</a></li>
+                  <li><a href="#CERTIFICATIONS" onclick="visible(2)">CERTIFICATIONS</a></li>
                 </ul>
              </div>
       </li>
-      <li><a href="#PROJECT">PROJECT</a></li>
-      <li><a href="#CONTACT">CONTACT</a></li>
+      <li><a href="#PROJECT" onclick="visible(3)">PROJECT</a></li>
+      <li><a href="#CONTACT" onclick="visible(4)">CONTACT</a></li>
         </ul>
      </header>
     </div>
@@ -44,8 +44,9 @@
           </div>
         </div>
      </div>
-
-     <div id="ABOUT" class="visibility" onmouseover="visible(1)">
+      
+     <div class="visibility" onmouseover="visible(1)">
+     <div id="ABOUT" >
          <div>
           <h2><span class="color-bleu">ABOUT</span> ME </h2>
            <p>I am a student in ENSA Safi in Computer 
@@ -57,6 +58,7 @@
           </form>
           </div>
      </div>
+    </div>
 
      <div id="EDUCATION" class="visibility" onmouseover="visible(2)">
         <h2>MY <span class="color-bleu">EDUCATION </span></h2>
