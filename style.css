@@ -76,7 +76,7 @@ header h2{
 header >ul{
     display: flex;
     justify-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 50%;
 }
 
@@ -100,7 +100,7 @@ header a{
     transition-duration: var(--first-transition);
     font-size: 14px;
 }
-header a:hover{
+header a:hover , header a:active{
    color: var(--first-color);
    background-color:var(--third-color) ;
 }
@@ -127,7 +127,8 @@ header a:hover{
         text-align: center;
     }
     header >ul{
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;
     }
     header >ul >li a{
         font-size: 12px;
@@ -142,7 +143,7 @@ header a:hover{
 /* HOME   */
 #HOME{
     margin-top: 4%;
-    padding: 4%;
+    padding: 10% 0;
 }
 #HOME .container{
     display: flex;
@@ -245,10 +246,18 @@ header a:hover{
     #ABOUT p{
         font-size: 14px;
     }
+    #ABOUT div{
+        width: 90%;
+        margin: 0 auto;
+    }
+    #ABOUT{
+        margin: 0;
+         width: 100%;
+     }
 }
 @media(min-width:1900px){
     #ABOUT{
-        margin: 1% auto;
+        width: 50%;
     }
     #ABOUT h2{
          font-size: 180%;
@@ -259,6 +268,7 @@ header a:hover{
     #ABOUT button{
         font-size: 150%;
     }
+
 }
 /*   EDUCATION   */
 #EDUCATION h2{
@@ -314,6 +324,7 @@ header a:hover{
         margin-bottom: 10px;
     }
 }
+
 .allSkills{
     width: 80%;
     margin: 8px auto;
@@ -369,6 +380,7 @@ header a:hover{
 .domaine div{
     margin-bottom: 10px;
     padding: 2%;
+    text-align: center;
 }
 .domaine img{
     min-width: 190px;
@@ -699,13 +711,17 @@ footer .container div:last-of-type{
         font-size: 140%;
     }
 }
+@media(hover: hover){
+    .visibility:hover{
+        opacity: 100% !important;
+    }
+}
+
 @media(max-width:600px){
     .visibility{
         opacity: 100%;
     }
 }
-
-
 /*   ANIMATIONS     */
 @keyframes logo{
     0%{
