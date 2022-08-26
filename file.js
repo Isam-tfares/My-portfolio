@@ -1,6 +1,8 @@
-function visible(i){
+function visible(n){
   var v = document.getElementsByClassName('visibility');
-     v[i].style.opacity = '100%';
+  for(var j=0;j<=n;j+=1){
+     v[j].style.opacity = '100%';
+  }
 
 }
 
